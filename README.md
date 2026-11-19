@@ -1,24 +1,11 @@
-# Mae Okada — Portfolio Landing Page
+# Mae Okada — Cinematic Portfolio
 
-A responsive, single-page professional portfolio built with plain HTML, CSS, and a small amount of JavaScript. No build tools required.
+An English-language portfolio with a scroll-driven hero, career timeline, and a spotlight on Puri Arsa Bali. The site uses HTML, CSS, and JavaScript with no build step.
 
-## Preview
+## Preview locally
 
-Open `index.html` in a browser, or run `python -m http.server 8000` and visit http://localhost:8000.
+From the root of the `dev/cinematic` branch, run `python -m http.server 8000` and open [localhost:8000](http://localhost:8000). You can also open `index.html` directly.
 
-## Sections
+Desktop browsers with motion enabled progressively zoom the hero artwork during scrolling. Smaller screens and reduced-motion users see a still scene.
 
-Introduction, About, Expertise, Approach, and Contact.
-
-## Branches
-
-- `main`: initial repository setup
-- `dev/main`: portfolio development
-
-## Editorial note
-
-LinkedIn profile content could not be independently retrieved during generation. Copy is based on known professional background and avoids unverified employers, titles, credentials, and dates. Review before publishing.
-
-## Deployment
-
-To publish with GitHub Pages, configure Settings → Pages for `dev/main` (root), if available. Pages has not been enabled.
+Professional details come from [Mae's public LinkedIn profile](https://id.linkedin.com/in/mae-okada). The bridge illustration is original generated artwork for the portfolio.
