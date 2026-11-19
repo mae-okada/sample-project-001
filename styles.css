@@ -2,8 +2,8 @@
   --night: #111c23;
   --ink: #232924;
   --cream: #f2eee4;
-  --ember: #ffb184;
-  --copper: #8e4026;
+  --ember: #abf5e0;
+  --copper: #225b59;
   --rule: #c4bfb0;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --sans: "Segoe UI", system-ui, sans-serif;
@@ -94,7 +94,7 @@ h1 em { font-weight: 400; }
 .about-copy { font: 400 clamp(1.55rem, 3vw, 2.5rem)/1.22 var(--serif); }
 .tags { gap: .4rem; margin-top: 1rem; }
 .tag { border: 1px solid var(--rule); border-radius: 2rem; padding: .22rem .65rem; font-size: .8rem; }
-#expertise { background: #1e2c2b; }
+#expertise { background: #102630; }
 #expertise .section-kicker, .card-number { color: var(--ember); }
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.2rem; }
 .card { border-top: 1px solid #d9e6d643; padding-top: 1.2rem; }
@@ -108,13 +108,13 @@ h1 em { font-weight: 400; }
   background-size: 1.4rem 1.4rem;
 }
 .feature .btn, .contact .btn { margin-top: 1.5rem; }
-.contact, .footer { background: #dca281; color: #241a16; }
+.contact, .footer { background: #a7ded0; color: #241a16; }
 .contact p { margin-top: 1.4rem; }
 .colophon { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-block: 1.5rem; border-top: 1px solid #241a1660; font: .78rem/1.45 var(--mono); }
 .colophon a { text-decoration: none; }
 
 @media (min-width: 57rem) and (prefers-reduced-motion: no-preference) {
-  .motion .hero { min-height: calc(max(45rem, 100svh) + 23svh); }
+  .motion .hero { min-height: calc(max(45rem, 100svh) + 100svh); }
   .motion .hero-frame { position: sticky; top: 0; }
 }
 @media (max-width: 56.99rem) {
@@ -135,4 +135,18 @@ h1 em { font-weight: 400; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+/* Three luminous strands cross the bridge as the camera moves forward. */
+.threads { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.landscape { filter: saturate(.58) hue-rotate(8deg); }
+.hero-frame { background: #071a24; }
+.hero-role, .section-kicker { letter-spacing: .19em; }
+.section-kicker::before { content: ""; display: inline-block; width: 2rem; height: 2px; background: currentColor; vertical-align: middle; margin-right: .8rem; }
+.card { border-top: 2px solid #73b6ad; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .card, .feature-art { animation: enter linear both; animation-timeline: view(); animation-range: entry 0% entry 85%; }
+    @keyframes enter { from { transform: translateY(3rem); clip-path: inset(0 0 65% 0); } to { transform: none; clip-path: inset(0); } }
+  }
 }
