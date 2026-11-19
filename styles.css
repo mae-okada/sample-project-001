@@ -2,8 +2,8 @@
   --night: #111c23;
   --ink: #232924;
   --cream: #f2eee4;
-  --ember: #ffb184;
-  --copper: #8e4026;
+  --ember: #abf5e0;
+  --copper: #225b59;
   --rule: #c4bfb0;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --sans: "Segoe UI", system-ui, sans-serif;
@@ -56,11 +56,9 @@ h2 em { font-weight: 400; }
   align-items: center;
   background: #182935;
 }
-.landscape, .hero-shade { position: absolute; inset: 0; z-index: -1; }
-.landscape {
-  background: #213441 url("assets/crossing.webp") 62% 58% / cover no-repeat;
-  transform: scale(var(--landscape-scale, 1.02));
-  transform-origin: 64% 54%;
+.orchard, .hero-shade { position: absolute; inset: 0; z-index: -1; }
+.orchard {
+  background: radial-gradient(ellipse at 76% 29%, #d7c992 0%, #7f986b 22%, #3f6451 46%, #1b3732 76%);
 }
 .hero-shade {
   background: linear-gradient(90deg, #0c171ff0, #0c171f97 44%, #0c171f18 80%),
@@ -94,7 +92,7 @@ h1 em { font-weight: 400; }
 .about-copy { font: 400 clamp(1.55rem, 3vw, 2.5rem)/1.22 var(--serif); }
 .tags { gap: .4rem; margin-top: 1rem; }
 .tag { border: 1px solid var(--rule); border-radius: 2rem; padding: .22rem .65rem; font-size: .8rem; }
-#expertise { background: #1e2c2b; }
+#expertise { background: #102630; }
 #expertise .section-kicker, .card-number { color: var(--ember); }
 .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.2rem; }
 .card { border-top: 1px solid #d9e6d643; padding-top: 1.2rem; }
@@ -108,13 +106,13 @@ h1 em { font-weight: 400; }
   background-size: 1.4rem 1.4rem;
 }
 .feature .btn, .contact .btn { margin-top: 1.5rem; }
-.contact, .footer { background: #dca281; color: #241a16; }
+.contact, .footer { background: #a7ded0; color: #241a16; }
 .contact p { margin-top: 1.4rem; }
 .colophon { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-block: 1.5rem; border-top: 1px solid #241a1660; font: .78rem/1.45 var(--mono); }
 .colophon a { text-decoration: none; }
 
 @media (min-width: 57rem) and (prefers-reduced-motion: no-preference) {
-  .motion .hero { min-height: calc(max(45rem, 100svh) + 23svh); }
+  .motion .hero { min-height: calc(max(45rem, 100svh) + 100svh); }
   .motion .hero-frame { position: sticky; top: 0; }
 }
 @media (max-width: 56.99rem) {
@@ -129,10 +127,29 @@ h1 em { font-weight: 400; }
   .hero-frame { min-height: max(37rem, 92svh); }
   .hero-content { padding-block: 6.5rem 5rem; }
   h1 { font-size: clamp(2.8rem, 10vw, 4rem); }
-  .landscape { background-position: 61% 50%; }
   .hero-shade { background: linear-gradient(90deg, #0c171fda, #0c171f44), linear-gradient(0deg, #0c171fde, transparent 45%); }
   .location { bottom: 1.25rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+
+.tree, .apple-track { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.apple {
+  position: absolute; left: 76%; top: 28%; width: clamp(1.6rem, 3vw, 3.8rem); aspect-ratio: 1.08;
+  border-radius: 46% 47% 45% 43% / 37% 40% 64% 64%;
+  background: radial-gradient(circle at 30% 26%, #ffe1ab, #ed7550 17%, #bb3931 48%, #611f23 94%);
+  box-shadow: inset -3px -4px 7px #50232075;
+  transform-origin: 45% -5%;
+}
+.apple::before, .apple::after { content: ""; position: absolute; }
+.apple::before { left: 45%; top: -18%; height: 26%; width: 8%; background: #55371f; transform: rotate(14deg); }
+.apple::after { left: 50%; top: -18%; width: 35%; height: 20%; border-radius: 95% 0; background: #375731; }
+.card { border-top: 2px solid #73b6ad; }
+@media (prefers-reduced-motion: no-preference) {
+  .arrive { animation: settle-in .8s cubic-bezier(.16,1,.3,1) backwards; }
+  .card:nth-child(2).arrive { animation-delay: .09s; }
+  .card:nth-child(3).arrive { animation-delay: .18s; }
+  @keyframes settle-in { from { opacity: .2; transform: translateY(2.6rem); } to { opacity: 1; transform: none; } }
 }
