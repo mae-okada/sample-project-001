@@ -40,10 +40,10 @@ h2 em { font-weight: 400; }
   border-bottom: 1px solid #ffffff45;
 }
 .wordmark { font: 600 1.25rem var(--serif); white-space: nowrap; letter-spacing: -.03em; text-decoration: none; }
-.wordmark span, h1 span { color: var(--ember); }
+.wordmark span, h1 em { color: var(--ember); }
 .masthead nav { display: flex; align-items: center; gap: clamp(.9rem, 3vw, 3rem); }
 .masthead nav a { text-decoration: none; font-size: .82rem; }
-.masthead nav a:hover, .explore:hover, .colophon a:hover { text-decoration: underline; }
+.masthead nav a:hover, .actions a:hover, .colophon a:hover { text-decoration: underline; }
 .nav-contact { border: 1px solid #ffffff64; padding: .48rem .85rem; }
 
 .hero { position: relative; }
@@ -68,49 +68,49 @@ h2 em { font-weight: 400; }
 }
 .hero-content { padding-block: 7rem 6rem; }
 .hero-role { color: var(--ember); margin-bottom: 1.1rem; }
-h1 { font-size: clamp(6rem, 14vw, 13rem); letter-spacing: -.095em; line-height: .74; }
+h1 { font-size: clamp(3rem, 7.9vw, 8rem); letter-spacing: -.067em; line-height: .94; }
 h1 em { font-weight: 400; }
 .hero-intro { max-width: 26rem; margin-top: clamp(1.6rem, 4vh, 2.65rem); font-size: clamp(.98rem, 1.7vw, 1.2rem); color: #f2eee4; }
-.explore { margin-top: 1.45rem; display: inline-flex; gap: 1rem; align-items: center; padding-block: .3rem; text-decoration: none; font-size: .83rem; }
-.explore span { color: var(--ember); font-size: 1.1rem; }
-.location { position: absolute; right: 5vw; bottom: 2rem; display: flex; align-items: center; gap: .6rem; }
-.location span { width: .42rem; height: .42rem; background: var(--ember); border-radius: 50%; }
+.actions, .footer-links, .tags { display: flex; flex-wrap: wrap; gap: 1rem; }
+.actions { align-items: center; margin-top: 1.5rem; }
+.btn { display: inline-block; padding: .6rem 1rem; text-decoration: none; border: 1px solid currentColor; font-size: .88rem; }
+.btn.primary { background: var(--cream); color: var(--night); border-color: var(--cream); }
+.btn:hover { text-decoration: underline; }
+.location { position: absolute; right: 5vw; bottom: 2rem; }
 
-.light { background: var(--cream); color: var(--ink); }
-.experience, .work, .contact { padding-block: clamp(4rem, 10vw, 9rem); }
-.light .section-label, .light h2 em, .career-date { color: var(--copper); }
-.intro-grid { display: grid; grid-template-columns: 1.4fr 1fr; align-items: end; gap: 3rem; }
-.intro-copy { max-width: 26rem; font-size: clamp(1rem, 1.8vw, 1.22rem); }
-.skills { margin-top: 1rem; font-size: .88rem; font-weight: 600; }
-.career { margin-top: clamp(2.75rem, 7vw, 6rem); border-top: 1px solid var(--rule); }
-.career article { display: grid; grid-template-columns: 1fr 1.8fr 2fr; padding-block: 1.6rem; gap: 1.6rem; align-items: baseline; border-bottom: 1px solid var(--rule); }
-.career h3 { font-size: clamp(1.35rem, 2.6vw, 2.05rem); line-height: 1.14; }
-.company { margin-top: .3rem; font-size: .84rem; }
-.career article > p:last-child { max-width: 32rem; font-size: .94rem; }
-.work { background: #1e2c2b; }
-.work .section-label, .work em, .text-link span { color: var(--ember); }
-.project-grid { display: grid; grid-template-columns: .85fr 1fr; gap: clamp(2.6rem, 8vw, 9rem); align-items: center; }
-.project-copy > p:not(.eyebrow) { margin-block: 1.6rem; max-width: 29rem; color: #dfded2; }
-.text-link { display: inline-block; font-size: .89rem; }
-.text-link span { margin-left: .2rem; }
-.project-visual {
-  padding: clamp(1rem, 4vw, 4.5rem);
-  background-color: #263936;
-  background-image: linear-gradient(90deg, #c0d6c412 1px, transparent 1px), linear-gradient(#c0d6c412 1px, transparent 1px), radial-gradient(ellipse at 70% 26%, #49625a, transparent 70%);
-  background-size: 1.4rem 1.4rem, 1.4rem 1.4rem, 100% 100%;
-  border: 1px solid #d9e6d643;
+.content, .contact { padding-block: clamp(3.5rem, 8vw, 7rem); }
+#about, #approach { background: var(--cream); color: var(--ink); }
+.section-kicker, .card-number, .feature small {
+  font: 500 .72rem/1.45 var(--mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
-.project-sheet { background: #152523; color: var(--cream); border: 1px solid #d9e6d643; padding: clamp(1rem, 3vw, 2rem); box-shadow: 0 1rem 2rem #111b1a60; }
-.project-sheet > p { color: var(--ember); }
-.project-steps { padding-left: 1.45rem; margin-bottom: 0; }
-.project-steps li { padding: .7rem 0 .7rem .4rem; border-bottom: 1px solid #d9e6d643; }
-.project-steps li::marker { font: .72rem var(--mono); color: #daddc4; }
-.contact { background: #dca281; color: #241a16; padding-bottom: 1.5rem; }
-.contact-grid { display: grid; grid-template-columns: 1fr minmax(12rem, .38fr); gap: 2rem; align-items: end; }
-.contact-links { display: grid; }
-.contact-links a { display: flex; justify-content: space-between; padding: .65rem 0; border-bottom: 1px solid #241a1660; font-size: 1rem; text-decoration: none; }
-.contact-links a:hover { text-decoration: underline; }
-.colophon { display: flex; justify-content: space-between; border-top: 1px solid #241a1660; margin-top: clamp(3rem, 8vw, 7rem); padding-top: 1.25rem; font: .75rem var(--mono); }
+.section-kicker { margin-bottom: 1.5rem; }
+#about .section-kicker, #approach .section-kicker, .feature small { color: var(--copper); }
+.section-heading, .about-grid, .feature { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: end; }
+.section-note, .about-side, .feature p, .contact p { max-width: 38rem; }
+.about-grid, .cards, .feature { margin-top: clamp(2rem, 5vw, 4rem); }
+.about-grid { align-items: start; padding-top: 2rem; border-top: 1px solid var(--rule); }
+.about-copy { font: 400 clamp(1.55rem, 3vw, 2.5rem)/1.22 var(--serif); }
+.tags { gap: .4rem; margin-top: 1rem; }
+.tag { border: 1px solid var(--rule); border-radius: 2rem; padding: .22rem .65rem; font-size: .8rem; }
+#expertise { background: #1e2c2b; }
+#expertise .section-kicker, .card-number { color: var(--ember); }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.2rem; }
+.card { border-top: 1px solid #d9e6d643; padding-top: 1.2rem; }
+.card h3, .feature h3 { margin: 1rem 0; font-size: clamp(1.6rem, 3vw, 2.6rem); line-height: 1.12; }
+.card-arrow { margin-top: 1rem; color: var(--ember); }
+.feature { align-items: center; }
+.feature-art {
+  display: grid; place-items: center; min-height: 13rem;
+  color: var(--ember); font: italic clamp(3.5rem, 8vw, 7rem) var(--serif);
+  background: linear-gradient(90deg, #c0d6c418 1px, transparent 1px), linear-gradient(#c0d6c418 1px, transparent 1px), #263936;
+  background-size: 1.4rem 1.4rem;
+}
+.feature .btn, .contact .btn { margin-top: 1.5rem; }
+.contact, .footer { background: #dca281; color: #241a16; }
+.contact p { margin-top: 1.4rem; }
+.colophon { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-block: 1.5rem; border-top: 1px solid #241a1660; font: .78rem/1.45 var(--mono); }
 .colophon a { text-decoration: none; }
 
 @media (min-width: 57rem) and (prefers-reduced-motion: no-preference) {
@@ -118,24 +118,20 @@ h1 em { font-weight: 400; }
   .motion .hero-frame { position: sticky; top: 0; }
 }
 @media (max-width: 56.99rem) {
-  .intro-grid, .project-grid { grid-template-columns: 1fr; gap: 1.75rem; }
-  .career article { grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: .55rem 1.5rem; }
-  .career article > p:last-child { grid-column: 2; }
+  .section-heading, .about-grid, .feature, .cards { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 @media (max-width: 36rem) {
-  .masthead { min-height: 4rem; }
+  .masthead { flex-wrap: wrap; gap: .45rem 1rem; padding-block: .65rem; }
   .masthead nav { gap: .7rem; }
   .masthead nav a { font-size: .73rem; }
   .nav-contact { padding: .35rem .45rem; }
   .wordmark { font-size: 1.02rem; }
   .hero-frame { min-height: max(37rem, 92svh); }
   .hero-content { padding-block: 6.5rem 5rem; }
-  h1 { font-size: clamp(5rem, 22vw, 7rem); }
+  h1 { font-size: clamp(2.8rem, 10vw, 4rem); }
   .landscape { background-position: 61% 50%; }
   .hero-shade { background: linear-gradient(90deg, #0c171fda, #0c171f44), linear-gradient(0deg, #0c171fde, transparent 45%); }
   .location { bottom: 1.25rem; }
-  .career article, .contact-grid { grid-template-columns: 1fr; }
-  .career article > p:last-child { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
