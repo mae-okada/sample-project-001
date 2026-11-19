@@ -35,3 +35,5 @@ function syncMotionPreference() {
 
 motionPreference.addEventListener('change', syncMotionPreference);
 syncMotionPreference();
+
+document.getElementById('year').textContent = new Date().getFullYear();
